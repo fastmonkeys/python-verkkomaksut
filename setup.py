@@ -14,6 +14,10 @@ Links
 """
 import sys
 import subprocess
+
+import distribute_setup
+distribute_setup.use_setuptools()
+
 from setuptools import Command, setup
 
 
@@ -34,7 +38,8 @@ class PyTest(Command):
 setup(
     name='verkkomaksut',
     version='0.1',
-    url='http://github.com/jpvanhal/verkkomaksut',
+    packages=['verkkomaksut'],
+    url='http://github.com/LiiquOy/python-verkkomaksut',
     license='BSD',
     author='Janne Vanhala',
     author_email='janne.vanhala@gmail.com',
