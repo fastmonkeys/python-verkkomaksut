@@ -464,7 +464,6 @@ class TestClient(object):
     def test_calculate_payment_receipt_hash(self):
         client = Client()
         hash_ = client._calculate_payment_receipt_hash(
-            '555E0C0DE304938AACA5D594DB72F315',
             '15153',
             '1176557554',
             '012345ABCDE',
@@ -476,8 +475,7 @@ class TestClient(object):
         client = Client()
         flexmock(client) \
             .should_receive('_calculate_payment_receipt_hash') \
-            .with_args(client, 'authcode', 'order_number', 'timestamp',
-                       'paid', 'method') \
+            .with_args('order_number', 'timestamp', 'paid', 'method') \
             .and_return('authcode')
         assert client._validate_payment_receipt_parameters(
             'authcode', 'order_number', 'timestamp', 'paid', 'method')
@@ -486,8 +484,7 @@ class TestClient(object):
         client = Client()
         flexmock(client) \
             .should_receive('_calculate_payment_receipt_hash') \
-            .with_args(client, 'authcode', 'order_number', 'timestamp',
-                       'paid', 'method') \
+            .with_args('order_number', 'timestamp', 'paid', 'method') \
             .and_return('not_ok')
         assert not client._validate_payment_receipt_parameters(
             'authcode', 'order_number', 'timestamp', 'paid', 'method')

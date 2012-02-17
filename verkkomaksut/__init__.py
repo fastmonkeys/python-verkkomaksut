@@ -311,12 +311,12 @@ class Client(object):
             'url': data['url']
         }
 
-    def _calculate_payment_receipt_hash(self, authcode, *params):
+    def _calculate_payment_receipt_hash(self, *params):
         base = '|'.join(params + (self.merchant_secret,))
         return hashlib.md5(base).hexdigest().upper()
 
     def _validate_payment_receipt_parameters(self, authcode, *params):
-        hash_ = self._calculate_payment_receipt_hash(self, authcode, *params)
+        hash_ = self._calculate_payment_receipt_hash(*params)
         return authcode == hash_
 
     def validate_succesful_payment(self, authcode, order_number, timestamp,
