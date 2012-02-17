@@ -319,7 +319,7 @@ class Client(object):
         hash_ = self._calculate_payment_receipt_hash(*params)
         return authcode == hash_
 
-    def validate_succesful_payment(self, authcode, order_number, timestamp,
+    def validate_successful_payment(self, authcode, order_number, timestamp,
                                    paid, method):
         """
         Validates parameters sent by Suomen Verkkomaksut to the success URL or
