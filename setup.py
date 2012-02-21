@@ -37,7 +37,7 @@ class PyTest(Command):
 
 setup(
     name='verkkomaksut',
-    version='0.1',
+    version='0.1.1',
     description='Python wrapper for the JSON API of Suomen Verkkomaksut.',
     long_description=__doc__,
     author='Janne Vanhala',
