@@ -9,7 +9,7 @@ Links
 
 * `documentation <http://packages.python.org/verkkomaksut>`_
 * `development version
-  <http://github.com/fastmonkeys/verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
+  <http://github.com/fastmonkeys/python-verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
 
 """
 from setuptools import setup
