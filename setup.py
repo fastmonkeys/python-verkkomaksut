@@ -22,7 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def get_version():
-    filename = os.path.join(HERE, 'transfluent.py')
+    filename = os.path.join(HERE, 'verkkomaksut', '__init__.py')
     contents = open(filename).read()
     pattern = r"^__version__ = '(.*?)'$"
     return re.search(pattern, contents, re.MULTILINE).group(1)
