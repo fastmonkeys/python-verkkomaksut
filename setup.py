@@ -32,7 +32,10 @@ setup(
     name='verkkomaksut',
     version=get_version(),
     description='Python wrapper for the JSON API of Suomen Verkkomaksut.',
-    long_description=__doc__,
+    long_description=(
+        open('README.rst').read() + '\n' +
+        open('CHANGES.rst').read()
+    ),
     author='Janne Vanhala',
     author_email='janne@fastmonkeys.com',
     url='http://github.com/fastmonkeys/python-verkkomaksut',
