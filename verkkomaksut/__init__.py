@@ -279,14 +279,13 @@ class Client(object):
         """
         self.merchant_id = merchant_id
         self.merchant_secret = merchant_secret
-        self.session = requests.Session(
-            auth=(merchant_id, merchant_secret),
-            headers={
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'X-Verkkomaksut-Api-Version': '1'
-            }
-        )
+        self.session = requests.Session()
+        self.session.auth = (merchant_id, merchant_secret)
+        self.session.headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-Verkkomaksut-Api-Version': '1'
+        }
 
     def create_payment(self, payment):
         """Creates a new payment and returns a `dict` with the following data:
