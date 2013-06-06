@@ -8,6 +8,8 @@
     :copyright: (c) 2013 by Janne Vanhala.
     :license: BSD, see LICENSE for more details.
 """
+__version__ = '0.2.0'
+
 import hashlib
 import json
 import requests

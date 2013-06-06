@@ -12,12 +12,25 @@ Links
   <http://github.com/fastmonkeys/python-verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
 
 """
+import os
+import re
+
 from setuptools import setup
+
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def get_version():
+    filename = os.path.join(HERE, 'transfluent.py')
+    contents = open(filename).read()
+    pattern = r"^__version__ = '(.*?)'$"
+    return re.search(pattern, contents, re.MULTILINE).group(1)
 
 
 setup(
     name='verkkomaksut',
-    version='0.1.1',
+    version=get_version(),
     description='Python wrapper for the JSON API of Suomen Verkkomaksut.',
     long_description=__doc__,
     author='Janne Vanhala',
