@@ -1,1 +1,4 @@
-include README.rst LICENSE test_verkkomaksut.py
+include README.rst
+include LICENSE
+include CHANGES.rst
+include test_verkkomaksut.py
