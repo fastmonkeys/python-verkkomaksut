@@ -9,7 +9,7 @@ Links
 
 * `documentation <http://packages.python.org/verkkomaksut>`_
 * `development version
-  <http://github.com/jpvanhal/verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
+  <http://github.com/fastmonkeys/verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
 
 """
 from setuptools import setup
@@ -21,8 +21,8 @@ setup(
     description='Python wrapper for the JSON API of Suomen Verkkomaksut.',
     long_description=__doc__,
     author='Janne Vanhala',
-    author_email='janne.vanhala@gmail.com',
-    url='http://github.com/LiiquOy/python-verkkomaksut',
+    author_email='janne@fastmonkeys.com',
+    url='http://github.com/fastmonkeys/python-verkkomaksut',
     packages=['verkkomaksut'],
     include_package_data=True,
     license='BSD',
