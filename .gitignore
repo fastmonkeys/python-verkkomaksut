@@ -1,8 +1,6 @@
-.Python
-.coverage
-__pycache__/
-bin/
-include/
-lib/
 *.egg-info/
 *.pyc
+.coverage
+.Python
+__pycache__/
+dist/
