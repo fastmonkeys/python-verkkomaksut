@@ -1,1 +1,1 @@
-include README.rst LICENSE distribute_setup.py runtests.py test_verkkomaksut.py
+include README.rst LICENSE test_verkkomaksut.py

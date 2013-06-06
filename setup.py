@@ -12,27 +12,7 @@ Links
   <http://github.com/jpvanhal/verkkomaksut/zipball/master#egg=verkkomaksut-dev>`_
 
 """
-import sys
-import subprocess
-
-import distribute_setup
-distribute_setup.use_setuptools()
-
-from setuptools import Command, setup
-
-
-class PyTest(Command):
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        errno = subprocess.call([sys.executable, 'runtests.py'])
-        raise SystemExit(errno)
+from setuptools import setup
 
 
 setup(
@@ -49,12 +29,8 @@ setup(
     zip_safe=False,
     platforms='any',
     install_requires=[
-        'setuptools',
         'requests',
     ],
-    cmdclass={
-        'test': PyTest
-    },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
