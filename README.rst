@@ -1,6 +1,12 @@
 verkkomaksut
 ------------
 
+|build status|_
+
+.. |build status| image:: https://secure.travis-ci.org/fastmonkeys/python-verkkomaksut.png?branch=master
+   :alt: Build Status
+.. _build status: http://travis-ci.org/fastmonkeys/python-verkkomaksut
+
 Python wrapper for the JSON API of Suomen Verkkomaksut.
 
 Installation
